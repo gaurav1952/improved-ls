@@ -9,8 +9,9 @@
 
 ## Requirements
 
+- Golang should be installed 
 - A Unix-like operating system (Linux, macOS, or similar).
-- `gcc` (GNU Compiler Collection) installed.
+
 
 ## Installation
 
@@ -34,14 +35,9 @@
 
 Run the command:
 ```bash
-./list [options] [directory]
+./list [directory]
 ```
 
-### Options
-- `-a`: Show all files, including hidden ones.
-- `-l`: Use long listing format.
-- `-s`: Sort files (e.g., by size, modification date).
-- `--help`: Display help message.
 
 ### Examples
  List all files in the current directory:
