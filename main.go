@@ -8,6 +8,8 @@ import (
 	"path/filepath"
 	"unicode"
 
+	
+
 	"github.com/fatih/color"
 	"github.com/jedib0t/go-pretty/v6/table"
 )
@@ -26,7 +28,7 @@ func isBinary(filePath string) bool {
 	}
 	defer file.Close()
 	extension := filepath.Ext(filePath)
-	if extension == ".mod" || extension == ".txt" {
+	if extension == ".mod" || extension == ".txt" || extension == ".gitignore" {
 		return false
 	}
 
@@ -45,6 +47,7 @@ func isBinary(filePath string) bool {
 	}
 	return false
 }
+
 func main() {
 	//colors
 	reset := "\033[0m"
@@ -57,7 +60,7 @@ func main() {
 	if len(args) > 1 {
 		dirPath = args[1]
 	}
-
+	
 	info, err := os.Stat(dirPath)
 	if os.IsNotExist(err) {
 		log.Fatalf("Error: The path '%s' does not exist.\n", dirPath)
@@ -68,6 +71,7 @@ func main() {
 	// color design
 	// helpStyle_underline := color.New(color.FgHiCyan).SprintFunc()
 	// helpStyle_working_command := color.New(color.FgWhite).SprintFunc()
+
 	// Open the directory
 	files, err := os.ReadDir(dirPath)
 	checkerr(err)
@@ -139,6 +143,9 @@ func main() {
 		// size := fileInfo.Size()
 		// permission := fileInfo.Mode()
 		// last_modifired := fileInfo.ModTime().Format("2006-01-02 15:04:05")
+
+		
+
 
 		file_table.AppendRow(table.Row{
 			boldYellow + strconv.Itoa(i) + reset,
