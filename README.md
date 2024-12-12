@@ -16,7 +16,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/improve-ls.git
+   git clone https://github.com/gaurav1952/improve-ls.git
    cd improve-ls
    ```
 
@@ -44,20 +44,11 @@ Run the command:
 - `--help`: Display help message.
 
 ### Examples
-1. List all files in the current directory:
-   ```bash
-   ./list # By default it list file in current directory
-   ```
+ List all files in the current directory:
+```bash
+./list # By default it list file in current directory
+```
 
-2. Use long listing format for `/home/user`:
-   ```bash
-   ./list -l /home/user
-   ```
-
-3. Sort files by size in the `/var/log` directory:
-   ```bash
-   ./list -s size /var/log
-   ```
 
 ## Contributing
 
